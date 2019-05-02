@@ -1,6 +1,6 @@
 # SMS-Spam-detector
 Spam detection plays an important role in business and other areas. It uses the concept of Natural Language Processing. In this project, I implemented the classification algorithms like Naive Bayes, KNN, Decision Tree, Random Forest and Logistic Regression. Then combined these different algorithms to make a voting classifier to increase the reliability of the output. Then deployed this project on Heroku using Flask.
-##HOW TO RUN ON LOCAL COMPUTER -
+## HOW TO RUN ON LOCAL COMPUTER -
 
 1. OPEN CMD
 2. NAVIGATE TO PROJECT FOLDER
@@ -9,7 +9,7 @@ Spam detection plays an important role in business and other areas. It uses the 
 5. COPY IT AND PASE IN WEB BROWSER.
 6. IT SHOULD BE UP AND RUNNING, ENJOY.
 
-##HOW TO DEPLOY ON HEROKU CLOUD:
+## HOW TO DEPLOY ON HEROKU CLOUD:
 
 1. OPEN CMD
 2. NAVIGATE TO PROJECT FOLDER
