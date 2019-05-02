@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>SMS Spam Detector Tool</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Jquery -->
+	<link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+	<!-- Main Style Css -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}" />
+</head>
+
+<body class="form-v4">
+	<div class="page-content">
+		<div class="form-v4-content">
+			<div class="form-left">
+				<h2>ABOUT</h2>
+				<p class="text-1">This is a SMS Spam detector which uses the Machine Learning inside to classify the
+					entered text as spam or not spam.</p>
+				<p class="text-2"><span>Made by:</span> This project is made by Utkarsh with the purpose of learning the
+					Natural Language Processing and to deploy it. </p>
+				<div class="form-left-last">
+					<a href="http://utkarshkumar.com" target="_blank"> <input type="submit" name="account"
+							class="account" value="VISIT WEBSITE"></a>
+				</div>
+			</div>
+			<form class="form-detail" action="{{ url_for('predict') }}" method="post" id="myform" onsubmit="$('#btn').hide(); document.getElementById('analyzing').innerHTML = 'ANALYZING TEXT PLEASE WAIT ...';">
+				<h2>ENTER TEXT HERE</h2>
+				<div class="form-row">
+					<label for="your_text">TEXT FOR ANALYSIS</label>
+					<textarea name="text" id="your_email" class="input-text" rows="4" required autofocus></textarea>
+				</div>
+				<label for="password" style="color:black;">NOT A ROBOT ? 5 * 10 =</label><br>
+				<div class="form-group">
+					<div class="form-row form-row-1">
+						<label for="comfirm-password">ANSWER</label>
+						<input type="text" name="comfirm_password" id="comfirm_password" pattern="50" class="input-text"
+							required>
+					</div>
+				</div>
+
+				<div class="form-row-last">
+					<input type="submit" name="register" id="btn" class="register" value="ANALYZE">
+					<h4 id = "analyzing" style=" color:#3786bd"></h4>
+				</div>
+			</form>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js">
+		</script>
+</body>
+
+</html>

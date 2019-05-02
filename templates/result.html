@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>SMS Spam Detector Tool</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Jquery -->
+	<link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+	<!-- Main Style Css -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/style1.css') }}" />
+</head>
+
+<body class="form-v4">
+	<div class="page-content">
+		<div class="form-v4-content">
+			<div class="form-left">
+
+			</div>
+			<div class="form-detail" id="myform">
+				<h1>TEXT ANALYSIS</h1>
+				<div class="form-row">		
+				{% if prediction == 0 %}
+				<h3 style="line-height:180%;">YYEEYYYYEE ! THE GIVEN TEXT IS
+				<span style="background-color:#00b724; padding: 5px;color: #fff;border-top-left-radius: 5px;
+						border-bottom-right-radius: 5px;"> NOT SPAM .</span></h3>
+				{% elif prediction == 1%}	
+				<h3 style="line-height:180%;">OOPS ! THE GIVEN TEXT IS
+						<span style="background-color:#d62704; padding: 5px;color: #fff;border-top-left-radius: 5px;
+								border-bottom-right-radius: 5px;"> SPAM.</span></h3>	
+				{% endif %}
+				</div>
+				<div class="form-row-last">
+					<a href="/"><input type="submit" name="register" class="register" value="NEW TEXT"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+</body>
+
+</html>
